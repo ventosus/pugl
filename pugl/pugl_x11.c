@@ -476,6 +476,7 @@ translateEvent(PuglView* view, XEvent xevent)
 		if (!strcmp(type, "WM_PROTOCOLS")) {
 			event.type = PUGL_CLOSE;
 		}
+		XFree(type);
 		break;
 	}
 	case ConfigureNotify:
