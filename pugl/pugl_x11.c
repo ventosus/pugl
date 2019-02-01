@@ -522,6 +522,7 @@ translateEvent(PuglView* view, XEvent xevent)
 			case 7: event.scroll.dx =  1.0f; break;
 			}
 		}
+		__attribute__((fallthrough));
 		// nobreak
 	case ButtonRelease:
 		if (xevent.xbutton.button < 4 || xevent.xbutton.button > 7) {
@@ -799,7 +800,7 @@ puglGetNativeWindow(PuglView* view)
 }
 
 void*
-puglGetContext(PuglView* view)
+puglGetContext(PuglView* view __attribute__((unused)))
 {
 #ifdef PUGL_HAVE_CAIRO
 	if (view->ctx_type & PUGL_CAIRO) {
