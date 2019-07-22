@@ -33,9 +33,10 @@
     NSMutableAttributedString* markedText;
 	NSTimer*                   timer;
 	NSTimer*                   urgentTimer;
+	bool                       reshaped;
 }
 
-- (void) dispatchConfigure:(NSRect)bounds;
+- (void) setReshaped;
 
 @end
 
