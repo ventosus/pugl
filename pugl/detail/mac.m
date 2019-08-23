@@ -31,6 +31,14 @@
 
 #include <stdlib.h>
 
+#ifndef __MAC_10_10
+typedef NSUInteger NSEventModifierFlags;
+#endif
+
+#ifndef __MAC_10_12
+typedef NSUInteger NSWindowStyleMask;
+#endif
+
 static NSRect
 rectToScreen(NSRect rect)
 {
