@@ -229,6 +229,11 @@ static PuglKey
 keySymToSpecial(WPARAM sym)
 {
 	switch (sym) {
+	case VK_BACK:     return PUGL_KEY_BACKSPACE;
+	case VK_TAB:      return PUGL_KEY_TAB;
+	case VK_RETURN:   return PUGL_KEY_RETURN;
+	case VK_ESCAPE:   return PUGL_KEY_ESCAPE;
+	case VK_DELETE:   return PUGL_KEY_DELETE;
 	case VK_F1:       return PUGL_KEY_F1;
 	case VK_F2:       return PUGL_KEY_F2;
 	case VK_F3:       return PUGL_KEY_F3;
@@ -241,8 +246,6 @@ keySymToSpecial(WPARAM sym)
 	case VK_F10:      return PUGL_KEY_F10;
 	case VK_F11:      return PUGL_KEY_F11;
 	case VK_F12:      return PUGL_KEY_F12;
-	case VK_BACK:     return PUGL_KEY_BACKSPACE;
-	case VK_DELETE:   return PUGL_KEY_DELETE;
 	case VK_LEFT:     return PUGL_KEY_LEFT;
 	case VK_UP:       return PUGL_KEY_UP;
 	case VK_RIGHT:    return PUGL_KEY_RIGHT;
@@ -268,6 +271,7 @@ keySymToSpecial(WPARAM sym)
 	case VK_NUMLOCK:  return PUGL_KEY_NUM_LOCK;
 	case VK_SNAPSHOT: return PUGL_KEY_PRINT_SCREEN;
 	case VK_PAUSE:    return PUGL_KEY_PAUSE;
+	default:          break;
 	}
 	return (PuglKey)0;
 }

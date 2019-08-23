@@ -291,6 +291,11 @@ static PuglKey
 keySymToSpecial(KeySym sym)
 {
 	switch (sym) {
+	case XK_BackSpace:   return PUGL_KEY_BACKSPACE;
+	case XK_Tab:         return PUGL_KEY_TAB;
+	case XK_Return:      return PUGL_KEY_RETURN;
+	case XK_Escape:      return PUGL_KEY_ESCAPE;
+	case XK_Delete:      return PUGL_KEY_DELETE;
 	case XK_F1:          return PUGL_KEY_F1;
 	case XK_F2:          return PUGL_KEY_F2;
 	case XK_F3:          return PUGL_KEY_F3;
@@ -327,7 +332,7 @@ keySymToSpecial(KeySym sym)
 	case XK_Num_Lock:    return PUGL_KEY_NUM_LOCK;
 	case XK_Print:       return PUGL_KEY_PRINT_SCREEN;
 	case XK_Pause:       return PUGL_KEY_PAUSE;
-	default: break;
+	default:             break;
 	}
 	return (PuglKey)0;
 }
