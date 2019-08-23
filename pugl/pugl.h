@@ -139,6 +139,8 @@ typedef enum {
 typedef enum {
 	// ASCII control codes
 	PUGL_KEY_BACKSPACE = 0x08,
+	PUGL_KEY_TAB       = 0x09,
+	PUGL_KEY_RETURN    = 0x0D,
 	PUGL_KEY_ESCAPE    = 0x1B,
 	PUGL_KEY_DELETE    = 0x7F,
 

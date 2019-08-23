@@ -165,34 +165,38 @@ keySymToSpecial(const NSEvent* const ev)
 	NSString* chars = [ev charactersIgnoringModifiers];
 	if ([chars length] == 1) {
 		switch ([chars characterAtIndex:0]) {
-		case NSF1FunctionKey:          return PUGL_KEY_F1;
-		case NSF2FunctionKey:          return PUGL_KEY_F2;
-		case NSF3FunctionKey:          return PUGL_KEY_F3;
-		case NSF4FunctionKey:          return PUGL_KEY_F4;
-		case NSF5FunctionKey:          return PUGL_KEY_F5;
-		case NSF6FunctionKey:          return PUGL_KEY_F6;
-		case NSF7FunctionKey:          return PUGL_KEY_F7;
-		case NSF8FunctionKey:          return PUGL_KEY_F8;
-		case NSF9FunctionKey:          return PUGL_KEY_F9;
-		case NSF10FunctionKey:         return PUGL_KEY_F10;
-		case NSF11FunctionKey:         return PUGL_KEY_F11;
-		case NSF12FunctionKey:         return PUGL_KEY_F12;
-		case NSDeleteCharacter:        return PUGL_KEY_BACKSPACE;
-		case NSDeleteFunctionKey:      return PUGL_KEY_DELETE;
-		case NSLeftArrowFunctionKey:   return PUGL_KEY_LEFT;
-		case NSUpArrowFunctionKey:     return PUGL_KEY_UP;
-		case NSRightArrowFunctionKey:  return PUGL_KEY_RIGHT;
-		case NSDownArrowFunctionKey:   return PUGL_KEY_DOWN;
-		case NSPageUpFunctionKey:      return PUGL_KEY_PAGE_UP;
-		case NSPageDownFunctionKey:    return PUGL_KEY_PAGE_DOWN;
-		case NSHomeFunctionKey:        return PUGL_KEY_HOME;
-		case NSEndFunctionKey:         return PUGL_KEY_END;
-		case NSInsertFunctionKey:      return PUGL_KEY_INSERT;
-		case NSMenuFunctionKey:        return PUGL_KEY_MENU;
-		case NSScrollLockFunctionKey:  return PUGL_KEY_SCROLL_LOCK;
-		case NSClearLineFunctionKey:   return PUGL_KEY_NUM_LOCK;
-		case NSPrintScreenFunctionKey: return PUGL_KEY_PRINT_SCREEN;
-		case NSPauseFunctionKey:       return PUGL_KEY_PAUSE;
+		case NSDeleteCharacter:         return PUGL_KEY_BACKSPACE;
+		case NSTabCharacter:            return PUGL_KEY_TAB;
+		case NSCarriageReturnCharacter: return PUGL_KEY_ENTER;
+		case 0x001B:                    return PUGL_KEY_ESCAPE;
+		case NSDeleteFunctionKey:       return PUGL_KEY_DELETE;
+		case NSF1FunctionKey:           return PUGL_KEY_F1;
+		case NSF2FunctionKey:           return PUGL_KEY_F2;
+		case NSF3FunctionKey:           return PUGL_KEY_F3;
+		case NSF4FunctionKey:           return PUGL_KEY_F4;
+		case NSF5FunctionKey:           return PUGL_KEY_F5;
+		case NSF6FunctionKey:           return PUGL_KEY_F6;
+		case NSF7FunctionKey:           return PUGL_KEY_F7;
+		case NSF8FunctionKey:           return PUGL_KEY_F8;
+		case NSF9FunctionKey:           return PUGL_KEY_F9;
+		case NSF10FunctionKey:          return PUGL_KEY_F10;
+		case NSF11FunctionKey:          return PUGL_KEY_F11;
+		case NSF12FunctionKey:          return PUGL_KEY_F12;
+		case NSLeftArrowFunctionKey:    return PUGL_KEY_LEFT;
+		case NSUpArrowFunctionKey:      return PUGL_KEY_UP;
+		case NSRightArrowFunctionKey:   return PUGL_KEY_RIGHT;
+		case NSDownArrowFunctionKey:    return PUGL_KEY_DOWN;
+		case NSPageUpFunctionKey:       return PUGL_KEY_PAGE_UP;
+		case NSPageDownFunctionKey:     return PUGL_KEY_PAGE_DOWN;
+		case NSHomeFunctionKey:         return PUGL_KEY_HOME;
+		case NSEndFunctionKey:          return PUGL_KEY_END;
+		case NSInsertFunctionKey:       return PUGL_KEY_INSERT;
+		case NSMenuFunctionKey:         return PUGL_KEY_MENU;
+		case NSScrollLockFunctionKey:   return PUGL_KEY_SCROLL_LOCK;
+		case NSClearLineFunctionKey:    return PUGL_KEY_NUM_LOCK;
+		case NSPrintScreenFunctionKey:  return PUGL_KEY_PRINT_SCREEN;
+		case NSPauseFunctionKey:        return PUGL_KEY_PAUSE;
+		default:                        break;
 		}
 		// SHIFT, CTRL, ALT, and SUPER are handled in [flagsChanged]
 	}
