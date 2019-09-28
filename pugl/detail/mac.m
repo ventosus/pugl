@@ -175,7 +175,7 @@ keySymToSpecial(const NSEvent* const ev)
 		switch ([chars characterAtIndex:0]) {
 		case NSDeleteCharacter:         return PUGL_KEY_BACKSPACE;
 		case NSTabCharacter:            return PUGL_KEY_TAB;
-		case NSCarriageReturnCharacter: return PUGL_KEY_ENTER;
+		case NSCarriageReturnCharacter: return PUGL_KEY_RETURN;
 		case 0x001B:                    return PUGL_KEY_ESCAPE;
 		case NSDeleteFunctionKey:       return PUGL_KEY_DELETE;
 		case NSF1FunctionKey:           return PUGL_KEY_F1;
