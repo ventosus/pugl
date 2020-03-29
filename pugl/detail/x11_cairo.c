@@ -58,9 +58,9 @@ puglX11CairoOpen(PuglView* view)
 	                                          (int)view->frame.width,
 	                                          (int)view->frame.height);
 
-	surface->front = cairo_surface_create_similar(
+	surface->front = cairo_surface_create_similar_image(
 	        surface->back,
-	        cairo_surface_get_content(surface->back),
+	        CAIRO_FORMAT_ARGB32,
 	        (int)view->frame.width,
 	        (int)view->frame.height);
 
